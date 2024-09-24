@@ -3,13 +3,15 @@ const product = require('../models/product'); // Ensure the correct path to the 
 
 const getallproductsstatic = async (req, res) => {
     try {
-        const search="d";
-        const products = await product.find({
-        //  name:"donut",
+        // const search="d";
+        // const products = await product.find({
+        // //  name:"donut",
         
-        name :{$regex: search, $options: 'i'},
+        // name :{$regex: search, $options: 'i'},
          
-        });
+        // });
+
+        const products = await product.find({}).sort('-name price');
         
         res.status(200).json({ products });
     } catch (error) {
@@ -19,7 +21,7 @@ const getallproductsstatic = async (req, res) => {
 
 const getallproducts = async (req, res) => {
 
-    const {featured,company,name}=req.query;
+    const {featured,company,name,sort}=req.query;
 
     const queryObject={};
     if(featured)
@@ -42,8 +44,15 @@ const getallproducts = async (req, res) => {
         queryObject.name={$regex: name,$options:"i"} //name;
     }
 
-    console.log(queryObject);
-  const products= await product.find(queryObject);
+   // console.log(queryObject);
+   // In the below one for sorting const is not useful so let is used.
+  //const products= await product.find(queryObject);
+  let result = await product.find(queryObject);
+  if(sort)
+  {
+   console.log(sort);
+  }
+  const products= await result;
 
     res.status(200).json({ products, nBHits: products.length });
 };
