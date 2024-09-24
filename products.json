@@ -1,0 +1,61 @@
+[
+    {
+        "name": "bread",
+        "price": 5,
+        "rating": 4,
+        "createdAt": "2022-02-01T14:23:00.000Z",
+        "company": "microsoft"
+    },
+    {
+        "name": "muffin",
+        "price": 3,
+        "rating": 4.5,
+        "createdAt": "2022-03-01T09:45:00.000Z",
+        "company": "google"
+    },
+    {
+        "name": "cookie",
+        "price": 2,
+        "rating": 5,
+        "createdAt": "2022-04-01T18:30:00.000Z",
+        "company": "marcos"
+    },
+    {
+        "name": "croissant",
+        "price": 4,
+        "rating": 4.8,
+        "createdAt": "2022-05-01T07:15:00.000Z",
+        "company": "google"
+    },
+    {
+        "name": "donut",
+        "price": 1.5,
+        "rating": 4.2,
+        "createdAt": "2022-06-01T22:50:00.000Z",
+        "company": "marcos"
+    },
+    
+        {
+            "name": "capachino",
+            "price": 1.5,
+            "rating": 4.2,
+            "createdAt": "2022-06-01T22:50:00.000Z",
+            "company": "marcos"
+        },
+        {
+            "name": "tea",
+            "price": 3,
+            "rating": 4.8,
+            "createdAt": "2022-05-01T14:45:00.000Z",
+            "company": "marcos"
+        },
+        {
+            "name": " pudding ",
+            "price": 4,
+            "rating": 4.5,
+            "createdAt": "2022-06-01T09:20:00.000Z",
+            "company": "marcos"
+        }
+    
+
+]
